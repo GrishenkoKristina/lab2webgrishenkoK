@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f7f7">
+  <title>Панель путешественника</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Панель путешественника">
+        <span class="brand-mark">К</span><span>ПАНЕЛЬ<span class="brand-light"> КРИСТИНЫ</span></span>
+      </a>
+      <div class="sidebar-label">РАБОЧЕЕ ПРОСТРАНСТВО</div>
+      <div class="side-current"><span class="side-dot"></span> Моя панель</div>
+      <div class="sidebar-bottom">
+        <div class="profile-avatar">К</div>
+        <div><strong>Кристина</strong><small>Личный кабинет</small></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumb">Рабочее пространство <span>/</span> Моя панель</div>
+        <div class="topbar-right"><span class="live-dot"></span><span>Ваш план путешествия</span></div>
+      </header>
+
+      <section class="welcome">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-line"></span> ВАШ ЦИФРОВОЙ ПОМОЩНИК</div>
+          <h1>Путешествие<br><span>начинается здесь.</span></h1>
+          <p>Погода, бюджет и планы — всё под контролем в одном пространстве.</p>
+          <div class="welcome-pills"><span>✦ Планируйте</span><span>↗ Сравнивайте</span><span>⌁ Путешествуйте</span></div>
+        </div>
+        <div class="welcome-art" aria-hidden="true">
+          <div class="sun"></div><div class="cloud cloud-one"></div><div class="cloud cloud-two"></div>
+          <div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+          <div class="art-plane">✈</div>
+          <div class="art-tag">YOUR NEXT<br><b>ADVENTURE</b></div>
+        </div>
+      </section>
+
+      <section class="section-heading">
+        <div><div class="section-kicker">ИНСТРУМЕНТЫ</div><h2>Моя панель</h2><p>Добавляйте нужные инструменты и управляйте ими.</p></div>
+        <div class="add-wrap">
+          <label class="sr-only" for="widget-select">Выберите виджет</label>
+          <select id="widget-select">
+            <option value="todo">Мои планы</option>
+            <option value="weather">Погода и прогноз</option>
+            <option value="currency">Конвертер валют</option>
+          </select>
+          <button id="add-widget" class="primary-button"><span>＋</span> Добавить виджет</button>
+        </div>
+      </section>
+
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+      <section id="widget-grid" class="widget-grid" aria-label="Виджеты панели"></section>
+
+      <footer>Панель Кристины <span>·</span> Планируйте легко, путешествуйте ярко.</footer>
+    </main>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
